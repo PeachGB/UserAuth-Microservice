@@ -1,16 +1,14 @@
 package com.peachgb.userService.auth.dtos;
 
+import lombok.Builder;
 import lombok.Data;
 
 @Data
-public class LoginDTO {
-    private String username;
+@Builder
+public class AuthRequestDTO {
     private String email;
     private String password;
 
-    public Boolean isUsername(){
-        return username != null;
-    }
     public Boolean isEmail(){
         return email != null;
     }

@@ -24,7 +24,6 @@ public class User implements UserDetails {
     @GeneratedValue
     private Long id;
     @NotBlank
-    private String name;
     @Email(message = "Must be a valid email")
     private String email;
     private String password_hash;
@@ -45,7 +44,7 @@ public class User implements UserDetails {
 
     @Override
     public String getUsername() {
-        return this.name;
+        return this.email;
     }
 
     @Override
